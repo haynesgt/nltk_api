@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 nltk = "*"
 fastapi = "*"
+gunicorn = "*"
+uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 

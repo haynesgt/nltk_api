@@ -11,4 +11,4 @@ RUN pipenv install --system
 
 COPY . ./
 
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 nltk-api:app
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 --worker-class uvicorn.workers.UvicornWorker nltk-api:app
