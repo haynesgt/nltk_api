@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 nltk = "*"
 fastapi = "*"
-uvicorn = "*"
 
 [dev-packages]
 
