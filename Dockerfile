@@ -9,6 +9,8 @@ COPY Pipfile Pipfile.lock ./
 
 RUN pipenv install --system
 
+RUN python -c "import nltk; nltk.download('punkt')"
+
 COPY . ./
 
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 --worker-class uvicorn.workers.UvicornWorker nltk-api:app
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 --worker-class uvicorn.workers.UvicornWorker nltk-api:app --root-path /nltk

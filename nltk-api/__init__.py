@@ -4,6 +4,8 @@ import nltk
 from pydantic import BaseModel
 from typing import List
 
+nltk.download("punkt")
+
 app = FastAPI()
 
 @app.get("/")
