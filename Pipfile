@@ -8,6 +8,7 @@ nltk = "*"
 fastapi = "*"
 gunicorn = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+pycountry = "*"
 
 [dev-packages]
 
